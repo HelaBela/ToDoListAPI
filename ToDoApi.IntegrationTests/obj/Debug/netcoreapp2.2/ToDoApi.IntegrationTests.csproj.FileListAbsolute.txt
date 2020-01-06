@@ -1,0 +1,17 @@
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.deps.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.runtimeconfig.dev.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoList.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/bin/Debug/netcoreapp2.2/ToDoList.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.csprojAssemblyReference.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.csproj.CoreCompileInputs.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.AssemblyInfoInputs.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.AssemblyInfo.cs
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.csproj.CopyComplete
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoApi.IntegrationTests/obj/Debug/netcoreapp2.2/ToDoApi.IntegrationTests.pdb

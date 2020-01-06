@@ -1,0 +1,14 @@
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/NUnit3.TestAdapter.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/nunit.engine.netstandard.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/ToDoAPI.unitTests.deps.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/ToDoAPI.unitTests.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/ToDoAPI.unitTests.runtimeconfig.dev.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/ToDoAPI.unitTests.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/bin/Release/netcoreapp2.2/ToDoAPI.unitTests.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/obj/Release/netcoreapp2.2/ToDoAPI.unitTests.csprojAssemblyReference.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/obj/Release/netcoreapp2.2/ToDoAPI.unitTests.csproj.CoreCompileInputs.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/obj/Release/netcoreapp2.2/ToDoAPI.unitTests.AssemblyInfoInputs.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/obj/Release/netcoreapp2.2/ToDoAPI.unitTests.AssemblyInfo.cs
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/obj/Release/netcoreapp2.2/ToDoAPI.unitTests.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/ToDoAPI.unitTests/obj/Release/netcoreapp2.2/ToDoAPI.unitTests.pdb
