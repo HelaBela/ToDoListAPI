@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a9b3f6b-7799-451a-9d2a-e3e1d2dd0502" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ToDoList/ItemsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoList/IToDoTaskListsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/IToDoTaskListsData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoApi.IntegrationTests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoApi.IntegrationTests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/IToDoTaskListsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoList/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoList/TasksList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/TasksList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoList/ToDoTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/ToDoTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoList/bin/Debug/netcoreapp2.2/ToDoList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/bin/Debug/netcoreapp2.2/ToDoList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoList/bin/Debug/netcoreapp2.2/ToDoList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/bin/Debug/netcoreapp2.2/ToDoList.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList/obj/Debug/netcoreapp2.2/ToDoList.pdb" afterDir="false" />
     </list>
@@ -26,16 +32,20 @@
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33E46F62-2720-44F4-B84B-BEBF6D7F0B71/a1/d36c7ef9/Guid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ToDoList/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ToDoList/ToDoTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ToDoList/TasksList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ToDoList/IToDoTaskListsData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ToDoList/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/app/Server.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ToDoApi.IntegrationTests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ToDoList/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ToDoAPI.unitTests/ServerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ToDoList/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ToDoList/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ToDoList/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ToDoList/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33E46F62-2720-44F4-B84B-BEBF6D7F0B71/4c/6330fc18/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -45,17 +55,23 @@
         <option value="$PROJECT_DIR$/ToDoList/Tasks.cs" />
         <option value="$PROJECT_DIR$/ToDoList/Task.cs" />
         <option value="$PROJECT_DIR$/ToDoList/ITaskData.cs" />
-        <option value="$PROJECT_DIR$/ToDoApi.IntegrationTests/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/ToDoList/published/IToDoTaskListsData.cs" />
         <option value="$PROJECT_DIR$/ToDoList/published/ToDoTasksInDynamo.cs" />
         <option value="$PROJECT_DIR$/ToDoList/ToDoList.csproj" />
         <option value="$PROJECT_DIR$/ToDoList/TasksList.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/Person.cs" />
         <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/ToDoList/Program.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/ToDoTask.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" />
         <option value="$PROJECT_DIR$/ToDoList/IToDoTaskListsData.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/ToDoTask.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/Person.cs" />
+        <option value="$PROJECT_DIR$/ToDoApi.IntegrationTests/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/User.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/IRepository.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/UserController.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/Program.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/ItemsController.cs" />
+        <option value="$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs" />
         <option value="$PROJECT_DIR$/ToDoList/Server.cs" />
       </list>
     </option>
@@ -116,7 +132,7 @@
       <workItem from="1576630407759" duration="14423000" />
       <workItem from="1578266316073" duration="323000" />
       <workItem from="1578269220829" duration="443000" />
-      <workItem from="1578269702434" duration="26098000" />
+      <workItem from="1578269702434" duration="34475000" />
     </task>
     <servers />
   </component>
@@ -147,17 +163,56 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs</url>
-          <line>49</line>
-          <properties documentPath="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" initialLine="49">
+          <url>file://$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs</url>
+          <line>55</line>
+          <properties documentPath="$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs" initialLine="55">
             <startOffsets>
-              <option value="1784" />
+              <option value="1983" />
             </startOffsets>
             <endOffsets>
-              <option value="1935" />
+              <option value="1984" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/ToDoList/ToDoTaskRepository.cs" initialLine="32">
+            <startOffsets>
+              <option value="1023" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1627" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ToDoList/ItemsController.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/ToDoList/ItemsController.cs" initialLine="19">
+            <startOffsets>
+              <option value="469" />
+            </startOffsets>
+            <endOffsets>
+              <option value="497" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ToDoList/Server.cs</url>
+          <line>40</line>
+          <properties documentPath="$PROJECT_DIR$/ToDoList/Server.cs" initialLine="40">
+            <startOffsets>
+              <option value="1208" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1252" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

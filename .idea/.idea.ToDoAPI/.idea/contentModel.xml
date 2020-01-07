@@ -331,7 +331,8 @@
           <e p="ConsoleApp3.pdb" t="Include" />
           <e p="ConsoleApp3.runtimeconfig.json" t="Include" />
         </e>
-        <e p="IToDoTaskListsData.cs" t="Include" />
+        <e p="IRepository.cs" t="Include" />
+        <e p="ItemsController.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -344,7 +345,10 @@
         <e p="TasksList.cs" t="Include" />
         <e p="ToDoList.csproj" t="IncludeRecursive" />
         <e p="ToDoTask.cs" t="Include" />
-        <e p="ToDoTasksInDynamo.cs" t="Include" />
+        <e p="ToDoTaskRepository.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+        <e p="UserController.cs" t="Include" />
+        <e p="UserRepository.cs" t="Include" />
       </e>
     </e>
   </component>

@@ -7,7 +7,7 @@ namespace ToDoAPI
         static void Main(string[] args)
         {
             Console.WriteLine("Running!");
-            Server.Run();
+            new Server().Run();
             Console.WriteLine("Not running!");
         }
     }

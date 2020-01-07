@@ -6,13 +6,12 @@ using Amazon.DynamoDBv2.Model;
 
 namespace ToDoAPI
 {
-    public class ToDoTasksInDynamo : IToDoTaskListsData
+    public class ToDoTaskRepository
     {
-        public ToDoTask Tasks { get; }
         private const string TableName = "HelenaToDoList";
         private readonly AmazonDynamoDBClient _dbClient;
 
-        public ToDoTasksInDynamo()
+        public ToDoTaskRepository()
         {
             _dbClient = new AmazonDynamoDBClient();
         }
@@ -24,7 +23,7 @@ namespace ToDoAPI
                 {
                     {"Id", new AttributeValue(toDoTask.Id)},
                     {"TaskName", new AttributeValue(toDoTask.TaskName)},
-                    {"IsCompleted", new AttributeValue(toDoTask.IsCompleted.ToString())},
+                    {"IsCompleted", new AttributeValue{BOOL = toDoTask.IsCompleted}},
                 });
             return toDoTask;
         }
@@ -38,14 +37,14 @@ namespace ToDoAPI
                     {"TaskName", new AttributeValueUpdate(new AttributeValue(toDoTask.TaskName), AttributeAction.PUT)},
                     {
                         "IsCompleted",
-                        new AttributeValueUpdate(new AttributeValue(toDoTask.IsCompleted.ToString()),
+                        new AttributeValueUpdate(new AttributeValue{BOOL = toDoTask.IsCompleted},
                             AttributeAction.PUT)
                     }
                 });
             return toDoTask;
         }
 
-        public async void DeleteById(string taskId)
+        public async Task DeleteById(string taskId)
         {
             var response = await _dbClient.DeleteItemAsync(TableName,
                 new Dictionary<string, AttributeValue> {{"Id", new AttributeValue(taskId)}});
@@ -53,7 +52,7 @@ namespace ToDoAPI
             
         }
 
-        public async Task<List<ToDoTask>> RetrieveAll()
+        public async Task<List<ToDoTask>> RetrieveAll(string userId)
         {
             var request = new ScanRequest
             {
@@ -83,7 +82,7 @@ namespace ToDoAPI
             return new ToDoTask(item["Id"].S, item["TaskName"].S, item["IsCompleted"].BOOL);
         }
 
-        public ToDoTask RetrieveById(int taskId)
+        public ToDoTask RetrieveById(string taskId)
         {
             throw new System.NotImplementedException();
         }
