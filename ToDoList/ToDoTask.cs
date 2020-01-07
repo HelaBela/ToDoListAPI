@@ -1,7 +1,4 @@
-using System.ComponentModel.Design;
-using ToDoAPI;
-
-namespace ConsoleApp3
+namespace ToDoAPI
 {
     public class ToDoTask
     {
@@ -9,12 +6,11 @@ namespace ConsoleApp3
         public string TaskName { get; set; }
         public bool IsCompleted { get; set; }
 
-        public ToDoTask( string id, string taskName, bool isCompleted)
+        public ToDoTask(string id, string taskName, bool isCompleted)
         {
             Id = id;
             TaskName = taskName;
             IsCompleted = isCompleted;
-
         }
     }
 }

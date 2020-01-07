@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using ConsoleApp3;
 using Newtonsoft.Json;
 
 namespace ToDoAPI
@@ -47,61 +46,51 @@ namespace ToDoAPI
 
         private static async Task ItemsPath(HttpListenerRequest req, byte[] buffer, HttpListenerResponse resp)
         {
-            if (req.Url.AbsolutePath.StartsWith("/items/"))
+            if (req.HttpMethod == "PUT" && req.Url.AbsolutePath.StartsWith("/items/"))
             {
+                var task = ToDoTask(req);
+                task.Id = req.Url.Segments[2];
+
+                var db = new ToDoTasksInDynamo();
+                await db.Update(task);
+            }
+            else if (req.HttpMethod == "DELETE" && req.Url.AbsolutePath.StartsWith("/items/"))
+            {
+                var task = ToDoTask(req);
+                task.Id = req.Url.Segments[2];
+
+                var db = new ToDoTasksInDynamo();
+                db.DeleteById(task.Id);
+            }
+            else if (req.HttpMethod == "GET" && req.Url.AbsolutePath == "/items")
+            {
+                var db = new ToDoTasksInDynamo();
+                var all = await db.RetrieveAll();
+
+                var itemsString = JsonConvert.SerializeObject(all);
+                buffer = System.Text.Encoding.UTF8.GetBytes(itemsString);
+            }
+            else if (req.HttpMethod == "POST" && req.Url.AbsolutePath == "/items")
+            {
+                var task = ToDoTask(req);
+
+                task.Id = Guid.NewGuid().ToString();
+                buffer = System.Text.Encoding.UTF8.GetBytes($"Your task Id is {task.Id}");
+
+                var db = new ToDoTasksInDynamo();
+                await db.Create(task);
             }
 
-
-            if (req.Url.AbsolutePath == "/items")
-            {
-                if (req.HttpMethod == "GET")
-                {
-                    var db = new ToDoTasksInDynamo();
-
-                    var all = await db.RetrieveAll();
-
-                    var itemsString = JsonConvert.SerializeObject(all);
-                    buffer = System.Text.Encoding.UTF8.GetBytes(itemsString);
-                }
-                else if (req.HttpMethod == "POST")
-                {
-                    //buffer = await Buffer(req);
-
-                    using (var reader = new StreamReader(req.InputStream,
-                        req.ContentEncoding))
-                    {
-                        var postRequestBody = reader.ReadToEnd();
-                        var task = JsonConvert.DeserializeObject<ToDoTask>(postRequestBody);
-                        task.Id = Guid.NewGuid().ToString();
-                        buffer = System.Text.Encoding.UTF8.GetBytes($"Your task Id is {task.Id}");
-
-                        var db = new ToDoTasksInDynamo();
-                        await db.Create(task);
-                    }
-                }
-
-                resp.ContentLength64 = buffer.Length;
-                await resp.OutputStream.WriteAsync(buffer, 0, buffer.Length);
-            }
+            resp.ContentLength64 = buffer.Length;
+            await resp.OutputStream.WriteAsync(buffer, 0, buffer.Length);
         }
 
-//        private static async Task<byte[]> Buffer(HttpListenerRequest req)
-//        {
-//            byte[] buffer;
-//            using (var reader = new StreamReader(req.InputStream,
-//                req.ContentEncoding))
-//            {
-//                var postRequestBody = reader.ReadToEnd();
-//                var task = JsonConvert.DeserializeObject<ToDoTask>(postRequestBody);
-//                task.Id = Guid.NewGuid().ToString();
-//                buffer = System.Text.Encoding.UTF8.GetBytes($"Your task Id is {task.Id}");
-//                
-//                var db = new ToDoTasksInDynamo();
-//                await db.Create(task);
-//            }
-
-
-        // return buffer;
+        private static ToDoTask ToDoTask(HttpListenerRequest req)
+        {
+            var reader = new StreamReader(req.InputStream, req.ContentEncoding);
+            var postRequestBody = reader.ReadToEnd();
+            var task = JsonConvert.DeserializeObject<ToDoTask>(postRequestBody);
+            return task;
+        }
     }
 }
-

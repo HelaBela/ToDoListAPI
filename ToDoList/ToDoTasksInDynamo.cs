@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
-using ConsoleApp3;
 
 namespace ToDoAPI
 {
@@ -30,14 +29,28 @@ namespace ToDoAPI
             return toDoTask;
         }
 
-        public ToDoTask Update(ToDoTask toDoTask)
+        public async Task<ToDoTask> Update(ToDoTask toDoTask)
         {
-            throw new System.NotImplementedException();
+            var response = await _dbClient.UpdateItemAsync(TableName,
+                new Dictionary<string, AttributeValue> {{"Id", new AttributeValue(toDoTask.Id)}},
+                new Dictionary<string, AttributeValueUpdate>
+                {
+                    {"TaskName", new AttributeValueUpdate(new AttributeValue(toDoTask.TaskName), AttributeAction.PUT)},
+                    {
+                        "IsCompleted",
+                        new AttributeValueUpdate(new AttributeValue(toDoTask.IsCompleted.ToString()),
+                            AttributeAction.PUT)
+                    }
+                });
+            return toDoTask;
         }
 
-        public ToDoTask DeleteById(int taskId)
+        public async void DeleteById(string taskId)
         {
-            throw new System.NotImplementedException();
+            var response = await _dbClient.DeleteItemAsync(TableName,
+                new Dictionary<string, AttributeValue> {{"Id", new AttributeValue(taskId)}});
+
+            
         }
 
         public async Task<List<ToDoTask>> RetrieveAll()
@@ -47,8 +60,8 @@ namespace ToDoAPI
                 TableName = TableName
             };
 
-            var foo = await _dbClient.ScanAsync(request);
-            var searchResults = foo.Items;
+            var response = await _dbClient.ScanAsync(request);
+            var searchResults = response.Items;
 
             return ParseItems(searchResults);
         }
