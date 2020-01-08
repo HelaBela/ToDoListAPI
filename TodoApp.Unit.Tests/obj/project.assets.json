@@ -1595,6 +1595,19 @@
         "runtime": {
           "bin/placeholder/TodoApp.dll": {}
         }
+      },
+      "TodoAppAPI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "TodoApp": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TodoAppAPI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TodoAppAPI.dll": {}
+        }
       }
     }
   },
@@ -5605,6 +5618,11 @@
       "type": "project",
       "path": "../TodoApp/TodoApp.csproj",
       "msbuildProject": "../TodoApp/TodoApp.csproj"
+    },
+    "TodoAppAPI/1.0.0": {
+      "type": "project",
+      "path": "../TodoAppAPI/TodoAppAPI.csproj",
+      "msbuildProject": "../TodoAppAPI/TodoAppAPI.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5614,6 +5632,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.11.0",
       "TodoApp >= 1.0.0",
+      "TodoAppAPI >= 1.0.0",
       "nunit >= 3.11.0"
     ]
   },
@@ -5647,6 +5666,9 @@
           "projectReferences": {
             "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj": {
               "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj"
+            },
+            "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj": {
+              "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj"
             }
           }
         }

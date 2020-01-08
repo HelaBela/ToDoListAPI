@@ -9,6 +9,6 @@ namespace ToDoAPI
         Task<T> Update(T entity);
         Task DeleteById(string id);
         Task<List<T>> RetrieveAll();
-        Task<Item> RetrieveById(string id);
+        Task<T> RetrieveById(string id);
     }
 }

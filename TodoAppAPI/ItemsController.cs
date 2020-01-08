@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace ToDoAPI
 {
-    public class ItemsController
+    public class ItemsController: IController
     {
         private readonly IRepository<Item> _itemsRepository;
 
@@ -15,7 +15,7 @@ namespace ToDoAPI
             _itemsRepository = itemsRepository;
         }
 
-        public async Task<string> ManageItems(string httpMethod, string httpBody, Uri url)
+        public async Task<string> Manage(string httpMethod, string httpBody, Uri url)
         {
             if (httpMethod == "PUT")
             {

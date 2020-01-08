@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TodoAppAPI\TodoAppAPI.csproj" />
       <ProjectReference Include="..\TodoApp\TodoApp.csproj" />
     </ItemGroup>
 

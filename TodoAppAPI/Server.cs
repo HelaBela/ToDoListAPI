@@ -9,8 +9,15 @@ namespace ToDoAPI
     public class Server
     {
         private HttpListener _listener;
-        private readonly ItemsController _itemsController = new ItemsController(new ItemsDynamoRepository());
-        private readonly UserController _userController = new UserController();
+        
+        private readonly IController _itemsController;
+        private readonly IController _userController;
+
+        public Server(IController itemsController, IController userController)
+        {
+            _itemsController = itemsController;
+            _userController = userController;
+        }
 
         public void Run()
         {
@@ -41,11 +48,11 @@ namespace ToDoAPI
 
                 if (req.Url.AbsolutePath.StartsWith("/item"))
                 {
-                    output = await _itemsController.ManageItems(req.HttpMethod, postRequestBody, req.Url);
+                    output = await _itemsController.Manage(req.HttpMethod, postRequestBody, req.Url);
                 }
                 else if (req.Url.AbsolutePath.StartsWith("/user"))
                 {
-                    output = await _userController.ManageUsers(req.HttpMethod, postRequestBody, req.Url);
+                    output = await _userController.Manage(req.HttpMethod, postRequestBody, req.Url);
                 }
 
                 var buffer = System.Text.Encoding.UTF8.GetBytes(output);

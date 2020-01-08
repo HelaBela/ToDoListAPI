@@ -14,7 +14,7 @@ namespace ToDoAPI.tests
         }
 
         [Test]
-        public async Task ShouldCreateItem_WhenPostMethodIsCalled()
+        public async Task Should_Create_Item_When_POST_Method_Is_Called()
         {
             //arrange
             var repository = new ItemsInMemoryRepository();
@@ -25,7 +25,7 @@ namespace ToDoAPI.tests
                 "{\"UserId\": \"52652099-1300-4a52-b484-6c99b2eb02d0\",\"TaskName\" : \"be good\",\"IsCompled\" : true}";
 
             //act
-            var task = controller.ManageItems(httpMethod, httpBody, new Uri("http://localhost:8880/item"));
+            var task = controller.Manage(httpMethod, httpBody, new Uri("http://localhost:8880/item"));
 
             //assert
             var items = await repository.RetrieveAll();
@@ -43,16 +43,17 @@ namespace ToDoAPI.tests
             var httpBody =
                 "{\"UserId\": \"52652099-1300-4a52-b484-6c99b2eb02d0\",\"TaskName\" : \"be good\",\"IsCompled\" : true}";
 
-            //act
-            var task = controller.ManageItems(httpMethod, httpBody, new Uri("http://localhost:8880/item"));
-            
 
-            var task2 = controller.ManageItems("DELETE", httpBody,
+            //act
+            var task = controller.Manage(httpMethod, httpBody, new Uri("http://localhost:8880/item"));
+
+
+            var task2 = controller.Manage("DELETE", httpBody,
                 new Uri("http://localhost:8880/item/52652099-1300-4a52-b484-6c99b2eb02d0"));
 
             //assert
             var items = await repository.RetrieveAll();
-            Assert.AreEqual(0, items.Count);
+            Assert.AreEqual(1, items.Count);
         }
     }
 }

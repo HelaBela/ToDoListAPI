@@ -5,12 +5,12 @@ using Amazon.DynamoDBv2.Model;
 
 namespace ToDoAPI
 {
-    public class UserRepository : IRepository<User>
+    public class UserDynamoRepository : IRepository<User>
     {
         private const string TableName = "TodoAppUsers";
         private readonly AmazonDynamoDBClient _dbClient;
 
-        public UserRepository()
+        public UserDynamoRepository()
         {
             _dbClient = new AmazonDynamoDBClient();
         }
@@ -73,7 +73,7 @@ namespace ToDoAPI
             return new User(item["UserId"].S, item["UserName"].S);
         }
 
-        public Task<Item> RetrieveById(string id)
+        public Task<User> RetrieveById(string id)
         {
             throw new System.NotImplementedException();
         }

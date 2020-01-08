@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/TodoApp.Unit.Tests.csproj",
-    "projectName": "TodoApp.Unit.Tests",
-    "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/TodoApp.Unit.Tests.csproj",
-    "outputPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/",
+    "projectUniqueName": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj",
+    "projectName": "TodoAppAPI",
+    "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj",
+    "outputPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -20,9 +20,6 @@
         "projectReferences": {
           "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj": {
             "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj"
-          },
-          "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj": {
-            "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj"
           }
         }
       }
@@ -36,27 +33,11 @@
   "frameworks": {
     "netcoreapp2.2": {
       "dependencies": {
-        "AWSSDK.DynamoDBv2": {
-          "target": "Package",
-          "version": "[3.3.104.10, )"
-        },
-        "Microsoft.NET.Test.Sdk": {
-          "target": "Package",
-          "version": "[15.9.0, )"
-        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
-        },
-        "NUnit3TestAdapter": {
-          "target": "Package",
-          "version": "[3.11.0, )"
-        },
-        "nunit": {
-          "target": "Package",
-          "version": "[3.11.0, )"
         }
       },
       "imports": [

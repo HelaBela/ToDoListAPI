@@ -6,16 +6,16 @@ using Newtonsoft.Json;
 
 namespace ToDoAPI
 {
-    public class UserController
+    public class UserController: IController
     {
-        private readonly UserRepository _userRepository;
+        private readonly IRepository<User> _userRepository;
 
-        public UserController()
+        public UserController(IRepository<User> userRepository)
         {
-            _userRepository = new UserRepository();
+            _userRepository = userRepository;
         }
 
-        public async Task<string> ManageUsers(string httpMethod, string httpBody, Uri url)
+        public async Task<string> Manage(string httpMethod, string httpBody, Uri url)
         {
             if (httpMethod == "PUT")
             {
@@ -25,21 +25,24 @@ namespace ToDoAPI
                 await _userRepository.Update(user);
                 return string.Empty;
             }
-            else if (httpMethod == "DELETE")
+
+            if (httpMethod == "DELETE")
             {
                 var id = url.Segments[2];
 
                 await _userRepository.DeleteById(id);
                 return string.Empty;
             }
-            else if (httpMethod == "GET")
+
+            if (httpMethod == "GET")
             {
                 var all = await _userRepository.RetrieveAll();
 
                 var usersString = JsonConvert.SerializeObject(all);
                 return usersString;
             }
-            else if (httpMethod == "POST")
+
+            if (httpMethod == "POST")
             {
                 var user = GetUserFromRequestBody(httpBody);
 
@@ -54,8 +57,6 @@ namespace ToDoAPI
 
         private static User GetUserFromRequestBody(string httpBody)
         {
-//            var reader = new StreamReader(req.InputStream, req.ContentEncoding);
-//            var postRequestBody = reader.ReadToEnd(); -> i dont understand how come we could move it to server class without issues.
             var user = JsonConvert.DeserializeObject<User>(httpBody);
             return user;
         }

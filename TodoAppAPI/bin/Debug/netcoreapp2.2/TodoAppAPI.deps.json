@@ -1,0 +1,88 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "ed851070eba4c41ef27c4cdafb04e7675688fc7a"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "TodoAppAPI/1.0.0": {
+        "dependencies": {
+          "TodoApp": "1.0.0"
+        },
+        "runtime": {
+          "TodoAppAPI.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.104.8": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.104.8"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.3.104.10": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.104.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.104.10"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "TodoApp/1.0.0": {
+        "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.3.104.10",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "TodoApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TodoAppAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/3.3.104.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Iee+0/ciWaekjKtWP6rcXU1znrJ3XvMhKPtZkZxamTJbrezo4VsihjDqM4KyioJZVgrnCpv9lR6GE6t0MTPYSQ==",
+      "path": "awssdk.core/3.3.104.8",
+      "hashPath": "awssdk.core.3.3.104.8.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.3.104.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KHgTUO3y7CeDga+YpG0m8c8zUQbl3kDv/BbpDlodOCT5upJK3fjBiVqvSrgPlIUfgLRRAl5C3pLtjDh8TJb5sA==",
+      "path": "awssdk.dynamodbv2/3.3.104.10",
+      "hashPath": "awssdk.dynamodbv2.3.3.104.10.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "TodoApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
