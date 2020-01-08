@@ -1,0 +1,17 @@
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.deps.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.runtimeconfig.dev.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csprojAssemblyReference.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.CoreCompileInputs.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.AssemblyInfoInputs.cache
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.AssemblyInfo.cs
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.CopyComplete
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb
