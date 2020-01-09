@@ -15,15 +15,17 @@ namespace ToDoAPI
             _itemsRepository = itemsRepository;
         }
 
-        public async Task<string> Manage(string httpMethod, string httpBody, Uri url)
+        public async Task<string> Manage(string httpMethod, string httpBody, Uri url, HttpListenerResponse resp)
         {
             if (httpMethod == "PUT")
             {
-                var task = GetTaskFromRequestBody(httpBody);
-                task.TaskId = url.Segments[4];
+                var item = GetTaskFromRequestBody(httpBody);
+                item.Id = url.Segments[4];
 
-                await _itemsRepository.Update(task);
-                return string.Empty;
+                await _itemsRepository.Update(item);
+                resp.StatusCode = (int) HttpStatusCode.Accepted;
+                //200 and same response as post - represent the latest task (updated task) 
+                return item.ConvertToJson();
             }
 
             if (httpMethod == "DELETE")
@@ -31,6 +33,7 @@ namespace ToDoAPI
                 var id = url.Segments[2];
 
                 await _itemsRepository.DeleteById(id);
+                resp.StatusCode = (int)HttpStatusCode.Accepted;
                 return string.Empty;
             }
 
@@ -38,17 +41,20 @@ namespace ToDoAPI
             {
                 var all = await _itemsRepository.RetrieveAll();
                 var itemsString = JsonConvert.SerializeObject(all);
+                resp.StatusCode = (int) HttpStatusCode.OK;
                 return itemsString;
             }
 
             if (httpMethod == "POST")
             {
-                var task = GetTaskFromRequestBody(httpBody);
+                var item = GetTaskFromRequestBody(httpBody);
 
-                task.TaskId = Guid.NewGuid().ToString();
+                item.Id = Guid.NewGuid().ToString();
 
-                await _itemsRepository.Create(task);
-                return $"Your task Id is {task.TaskId}";
+                await _itemsRepository.Create(item);
+                resp.StatusCode = (int) HttpStatusCode.OK;
+                
+                return item.ConvertToJson();
             }
 
             return string.Empty;

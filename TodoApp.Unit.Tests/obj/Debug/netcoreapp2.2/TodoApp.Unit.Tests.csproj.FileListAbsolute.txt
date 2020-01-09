@@ -15,3 +15,5 @@
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.CopyComplete
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.dll
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb

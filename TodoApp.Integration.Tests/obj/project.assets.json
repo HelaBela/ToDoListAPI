@@ -5613,6 +5613,7 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.11.0",
+      "Newtonsoft.Json >= 12.0.3",
       "TodoApp >= 1.0.0",
       "nunit >= 3.11.0"
     ]
@@ -5677,6 +5678,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.11.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
           },
           "nunit": {
             "target": "Package",

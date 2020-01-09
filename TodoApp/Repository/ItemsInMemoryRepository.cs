@@ -10,14 +10,14 @@ namespace ToDoAPI
 
         public async Task<Item> Create(Item entity)
         {
-             _itemsDataBase.Add(entity.TaskId, entity);
+             _itemsDataBase.Add(entity.Id, entity);
 
             return entity;
         }
 
         public async Task<Item> Update(Item entity)
         {
-            _itemsDataBase[entity.TaskId] = entity;
+            _itemsDataBase[entity.Id] = entity;
 
             return entity;
         }

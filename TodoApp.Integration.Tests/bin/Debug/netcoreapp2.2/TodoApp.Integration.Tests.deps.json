@@ -6,17 +6,17 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "TodoApp.Unit.Tests/1.0.0": {
+      "TodoApp.Integration.Tests/1.0.0": {
         "dependencies": {
           "AWSSDK.DynamoDBv2": "3.3.104.10",
           "Microsoft.NET.Test.Sdk": "15.9.0",
           "NUnit3TestAdapter": "3.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "TodoApp": "1.0.0",
-          "TodoAppAPI": "1.0.0",
           "NUnit": "3.11.0"
         },
         "runtime": {
-          "TodoApp.Unit.Tests.dll": {}
+          "TodoApp.Integration.Tests.dll": {}
         }
       },
       "AWSSDK.Core/3.3.104.8": {
@@ -996,19 +996,11 @@
         "runtime": {
           "TodoApp.dll": {}
         }
-      },
-      "TodoAppAPI/1.0.0": {
-        "dependencies": {
-          "TodoApp": "1.0.0"
-        },
-        "runtime": {
-          "TodoAppAPI.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "TodoApp.Unit.Tests/1.0.0": {
+    "TodoApp.Integration.Tests/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1504,11 +1496,6 @@
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "TodoApp/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TodoAppAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

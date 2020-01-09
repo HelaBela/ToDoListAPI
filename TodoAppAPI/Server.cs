@@ -9,7 +9,7 @@ namespace ToDoAPI
     public class Server
     {
         private HttpListener _listener;
-        
+
         private readonly IController _itemsController;
         private readonly IController _userController;
 
@@ -42,17 +42,17 @@ namespace ToDoAPI
                 var reader = new StreamReader(req.InputStream, req.ContentEncoding);
                 var postRequestBody = reader.ReadToEnd();
 
-                var output = $"Hello, this is the 'to do' list.";
+                var output = "Hello, this is the 'to do' list.";
 
                 Console.WriteLine("I got a request!");
 
-                if (req.Url.AbsolutePath.StartsWith("/item"))
+                if (req.Url.AbsolutePath.StartsWith("/item")) // TODO: fix starts with 
                 {
-                    output = await _itemsController.Manage(req.HttpMethod, postRequestBody, req.Url);
+                    output = await _itemsController.Manage(req.HttpMethod, postRequestBody, req.Url, resp);
                 }
                 else if (req.Url.AbsolutePath.StartsWith("/user"))
                 {
-                    output = await _userController.Manage(req.HttpMethod, postRequestBody, req.Url);
+                    output = await _userController.Manage(req.HttpMethod, postRequestBody, req.Url, resp);
                 }
 
                 var buffer = System.Text.Encoding.UTF8.GetBytes(output);

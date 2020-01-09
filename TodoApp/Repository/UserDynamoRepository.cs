@@ -21,7 +21,7 @@ namespace ToDoAPI
                 new Dictionary<string, AttributeValue>
                 {
                     {"UserId", new AttributeValue(user.Id)},
-                    {"UserName", new AttributeValue(user.UserName)},
+                    {"UserName", new AttributeValue(user.Name)},
                 });
             return user;
         }
@@ -32,7 +32,7 @@ namespace ToDoAPI
                 new Dictionary<string, AttributeValue> {{"Id", new AttributeValue(user.Id)}},
                 new Dictionary<string, AttributeValueUpdate>
                 {
-                    {"UserName", new AttributeValueUpdate(new AttributeValue(user.UserName), AttributeAction.PUT)},
+                    {"UserName", new AttributeValueUpdate(new AttributeValue(user.Name), AttributeAction.PUT)},
                 });
             return user;
         }

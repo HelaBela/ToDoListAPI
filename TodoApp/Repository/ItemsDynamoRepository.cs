@@ -22,8 +22,8 @@ namespace ToDoAPI
                 new Dictionary<string, AttributeValue>
                 {
                     {"UserId", new AttributeValue(item.UserId)},
-                    {"TaskId", new AttributeValue(item.TaskId)},
-                    {"TaskName", new AttributeValue(item.TaskName)},
+                    {"TaskId", new AttributeValue(item.Id)},
+                    {"TaskName", new AttributeValue(item.Title)},
                     {"IsCompleted", new AttributeValue {BOOL = item.IsCompleted}},
                 });
             return item;
@@ -32,10 +32,10 @@ namespace ToDoAPI
         public async Task<Item> Update(Item item)
         {
             var response = await _dbClient.UpdateItemAsync(TableName,
-                new Dictionary<string, AttributeValue> {{"Id", new AttributeValue(item.TaskId)}},
+                new Dictionary<string, AttributeValue> {{"Id", new AttributeValue(item.Id)}},
                 new Dictionary<string, AttributeValueUpdate>
                 {
-                    {"TaskName", new AttributeValueUpdate(new AttributeValue(item.TaskName), AttributeAction.PUT)},
+                    {"TaskName", new AttributeValueUpdate(new AttributeValue(item.Title), AttributeAction.PUT)},
                     
                     {
                         "UserId",

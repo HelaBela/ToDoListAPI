@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace ToDoAPI
 {
-    public class UserController: IController
+    public class UserController : IController
     {
         private readonly IRepository<User> _userRepository;
 
@@ -15,7 +15,7 @@ namespace ToDoAPI
             _userRepository = userRepository;
         }
 
-        public async Task<string> Manage(string httpMethod, string httpBody, Uri url)
+        public async Task<string> Manage(string httpMethod, string httpBody, Uri url, HttpListenerResponse resp)
         {
             if (httpMethod == "PUT")
             {
@@ -23,7 +23,8 @@ namespace ToDoAPI
                 user.Id = url.Segments[2];
 
                 await _userRepository.Update(user);
-                return string.Empty;
+                resp.StatusCode = (int) HttpStatusCode.Accepted;
+                return user.ConvertToJson();
             }
 
             if (httpMethod == "DELETE")
@@ -31,6 +32,7 @@ namespace ToDoAPI
                 var id = url.Segments[2];
 
                 await _userRepository.DeleteById(id);
+                resp.StatusCode = (int) HttpStatusCode.Accepted;
                 return string.Empty;
             }
 
@@ -39,6 +41,7 @@ namespace ToDoAPI
                 var all = await _userRepository.RetrieveAll();
 
                 var usersString = JsonConvert.SerializeObject(all);
+                resp.StatusCode = (int) HttpStatusCode.OK;
                 return usersString;
             }
 
@@ -47,9 +50,10 @@ namespace ToDoAPI
                 var user = GetUserFromRequestBody(httpBody);
 
                 user.Id = Guid.NewGuid().ToString();
-                return $"Your user Id is {user.Id}";
-
+                resp.StatusCode = (int) HttpStatusCode.OK;
                 await _userRepository.Create(user);
+
+                return user.ConvertToJson();
             }
 
             return string.Empty;
