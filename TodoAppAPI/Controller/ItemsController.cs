@@ -1,69 +1,119 @@
 using System;
-using System.IO;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using TodoAppAPI;
 
 namespace ToDoAPI
 {
-    public class ItemsController: IController
+    public class ItemsController : IController
     {
         private readonly IRepository<Item> _itemsRepository;
+        private readonly Dictionary<string, Func<string, Uri, string, Task<ResponseModel>>> _httpMethodHandlers;
 
         public ItemsController(IRepository<Item> itemsRepository)
         {
             _itemsRepository = itemsRepository;
+            _httpMethodHandlers = new Dictionary<string, Func<string, Uri, string, Task<ResponseModel>>>()
+            {
+                {"GET", HandleGet},
+                {"POST", HandlePost},
+                {"PUT", HandlePut},
+                {"DELETE", HandleDelete}
+            };
         }
 
-        public async Task<string> Manage(string httpMethod, string httpBody, Uri url, HttpListenerResponse resp)
+        public async Task<ResponseModel> HandleIncomingRequest(string httpMethod, string httpBody, Uri url)
         {
-            if (httpMethod == "PUT")
+            try
             {
-                var item = GetTaskFromRequestBody(httpBody);
-                item.Id = url.Segments[4];
+                if (_httpMethodHandlers.ContainsKey(httpMethod))
+                {
+                    var handler = _httpMethodHandlers[httpMethod];
+                    return await handler(httpMethod, url, httpBody);
+                }
 
-                await _itemsRepository.Update(item);
-                resp.StatusCode = (int) HttpStatusCode.Accepted;
-                //200 and same response as post - represent the latest task (updated task) 
-                return item.ConvertToJson();
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.MethodNotAllowed,
+                    Body = "Please Choose a different method"
+                };
             }
-
-            if (httpMethod == "DELETE")
+            catch (Exception)
             {
-                var id = url.Segments[2];
-
-                await _itemsRepository.DeleteById(id);
-                resp.StatusCode = (int)HttpStatusCode.Accepted;
-                return string.Empty;
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.InternalServerError,
+                    Body = "Sorry, this is the internal server error."
+                };
             }
-
-            if (httpMethod == "GET")
-            {
-                var all = await _itemsRepository.RetrieveAll();
-                var itemsString = JsonConvert.SerializeObject(all);
-                resp.StatusCode = (int) HttpStatusCode.OK;
-                return itemsString;
-            }
-
-            if (httpMethod == "POST")
-            {
-                var item = GetTaskFromRequestBody(httpBody);
-
-                item.Id = Guid.NewGuid().ToString();
-
-                await _itemsRepository.Create(item);
-                resp.StatusCode = (int) HttpStatusCode.OK;
-                
-                return item.ConvertToJson();
-            }
-
-            return string.Empty;
         }
 
-        private static Item GetTaskFromRequestBody(string body)
+        private async Task<ResponseModel> HandleGet(string httpMethod, Uri url, string httpBody)
         {
-            var task = JsonConvert.DeserializeObject<Item>(body);
-            return task;
+            var all = await _itemsRepository.RetrieveAll();
+            var itemsString = JsonConvert.SerializeObject(all);
+            return new ResponseModel
+            {
+                Code = HttpStatusCode.OK,
+                Body = itemsString
+            };
+        }
+
+        private async Task<ResponseModel> HandlePost(string httpMethod, Uri url, string httpBody)
+        {
+            var item = JsonConvert.DeserializeObject<Item>(httpBody);
+            item.Id = Guid.NewGuid().ToString();
+            await _itemsRepository.Create(item);
+            return new ResponseModel
+            {
+                Code = HttpStatusCode.Created,
+                Body = item.ConvertToJson()
+            };
+        }
+
+        private async Task<ResponseModel> HandlePut(string httpMethod, Uri url, string httpBody)
+        {
+            if (url.Segments[2] == null ||
+                url.Segments[2] != null && !await _itemsRepository.IsItemIdInDataBase(url.Segments[2]))
+            {
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.NotFound,
+                    Body = "Invalid task id."
+                };
+            }
+
+            var item = JsonConvert.DeserializeObject<Item>(httpBody);
+            item.Id = url.Segments[2];
+            await _itemsRepository.Update(item);
+            return new ResponseModel
+            {
+                Code = HttpStatusCode.OK,
+                Body = item.ConvertToJson()
+            };
+        }
+
+        private async Task<ResponseModel> HandleDelete(string httpMethod, Uri url, string httpBody)
+        {
+            if (url.Segments[2] == null ||
+                url.Segments[2] != null && !await _itemsRepository.IsItemIdInDataBase(url.Segments[2]))
+            {
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.NotFound,
+                    Body = "Invalid task id."
+                };
+            }
+
+            var id = url.Segments[2];
+            await _itemsRepository.DeleteById(id);
+            return new ResponseModel
+            {
+                Code = HttpStatusCode.NoContent,
+                Body = string.Empty
+            };
         }
     }
 }

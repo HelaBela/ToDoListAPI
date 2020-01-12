@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using TodoAppAPI;
 
 namespace ToDoAPI
 {
@@ -15,7 +16,7 @@ namespace ToDoAPI
             _userRepository = userRepository;
         }
 
-        public async Task<string> Manage(string httpMethod, string httpBody, Uri url, HttpListenerResponse resp)
+        public async Task<ResponseModel> HandleIncomingRequest(string httpMethod, string httpBody, Uri url)
         {
             if (httpMethod == "PUT")
             {
@@ -23,8 +24,11 @@ namespace ToDoAPI
                 user.Id = url.Segments[2];
 
                 await _userRepository.Update(user);
-                resp.StatusCode = (int) HttpStatusCode.Accepted;
-                return user.ConvertToJson();
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.OK, 
+                    Body = user.ConvertToJson()
+                };
             }
 
             if (httpMethod == "DELETE")
@@ -32,8 +36,11 @@ namespace ToDoAPI
                 var id = url.Segments[2];
 
                 await _userRepository.DeleteById(id);
-                resp.StatusCode = (int) HttpStatusCode.Accepted;
-                return string.Empty;
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.OK, 
+                    Body = string.Empty
+                };
             }
 
             if (httpMethod == "GET")
@@ -41,8 +48,11 @@ namespace ToDoAPI
                 var all = await _userRepository.RetrieveAll();
 
                 var usersString = JsonConvert.SerializeObject(all);
-                resp.StatusCode = (int) HttpStatusCode.OK;
-                return usersString;
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.OK, 
+                    Body = usersString
+                };
             }
 
             if (httpMethod == "POST")
@@ -50,13 +60,21 @@ namespace ToDoAPI
                 var user = GetUserFromRequestBody(httpBody);
 
                 user.Id = Guid.NewGuid().ToString();
-                resp.StatusCode = (int) HttpStatusCode.OK;
+               
                 await _userRepository.Create(user);
 
-                return user.ConvertToJson();
+                return new ResponseModel
+                {
+                    Code = HttpStatusCode.OK, 
+                    Body = user.ConvertToJson()
+                };
             }
 
-            return string.Empty;
+            return new ResponseModel
+            {
+                Code = HttpStatusCode.Accepted, 
+                Body = string.Empty
+            };
         }
 
         private static User GetUserFromRequestBody(string httpBody)

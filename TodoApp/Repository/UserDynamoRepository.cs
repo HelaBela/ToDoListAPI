@@ -77,5 +77,19 @@ namespace ToDoAPI
         {
             throw new System.NotImplementedException();
         }
+        
+        public Task<bool> IsItemIdInDataBase(string id)
+        {
+            throw new System.NotImplementedException();
+//            var itemsStored = _itemsDataBase.Values.ToList();
+//            var givenItem = itemsStored.Find(s => s.Id == id);
+//
+//            if (givenItem != null)
+//            {
+//                return true;
+//            }
+//            return false;
+
+        }
     }
 }

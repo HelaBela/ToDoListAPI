@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,11 +16,11 @@ namespace ToDoAPI
             return entity;
         }
 
-        public async Task<Item> Update(Item entity)
+        public  Task<Item> Update(Item entity)
         {
             _itemsDataBase[entity.Id] = entity;
 
-            return entity;
+            return Task.FromResult(entity);
         }
 
         public async Task DeleteById(string id)
@@ -35,6 +36,14 @@ namespace ToDoAPI
         public Task<Item> RetrieveById(string id)
         {
             return Task.FromResult(_itemsDataBase[id]);
+        }
+
+        public Task<bool> IsItemIdInDataBase(string id)
+        {
+            var itemsStored = _itemsDataBase.Values.ToList();
+            var givenItem = itemsStored.Find(s => s.Id == id);
+
+            return Task.FromResult(givenItem != null);
         }
     }
 }

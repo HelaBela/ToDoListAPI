@@ -21,5 +21,12 @@ namespace ToDoAPI
         {
             return  JsonConvert.SerializeObject(this);
         }
+
+//        public bool IsItemIdValid(string itemId )
+//        {
+//            if(itemId)
+//            
+//            return true;
+//        }
     }
 }

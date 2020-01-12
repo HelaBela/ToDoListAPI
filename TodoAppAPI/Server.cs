@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using TodoAppAPI;
 
 namespace ToDoAPI
 {
@@ -42,21 +43,37 @@ namespace ToDoAPI
                 var reader = new StreamReader(req.InputStream, req.ContentEncoding);
                 var postRequestBody = reader.ReadToEnd();
 
-                var output = "Hello, this is the 'to do' list.";
+                var output = new ResponseModel()
+                {
+                    Code = HttpStatusCode.OK,
+                    Body = string.Empty
+                };
 
                 Console.WriteLine("I got a request!");
 
-                if (req.Url.AbsolutePath.StartsWith("/item")) // TODO: fix starts with 
+                if (req.Url.Segments[1] == "item/")
                 {
-                    output = await _itemsController.Manage(req.HttpMethod, postRequestBody, req.Url, resp);
+                    output = await _itemsController.HandleIncomingRequest(req.HttpMethod, postRequestBody, req.Url);
                 }
-                else if (req.Url.AbsolutePath.StartsWith("/user"))
+                else if (req.Url.Segments[1] == "user/")
                 {
-                    output = await _userController.Manage(req.HttpMethod, postRequestBody, req.Url, resp);
+                    output = await _userController.HandleIncomingRequest(req.HttpMethod, postRequestBody, req.Url);
+                }
+                else if (req.Url.Segments[1] == "done/")
+                {
+                    output.Code = HttpStatusCode.Gone;
+                    output.Body = "bye";
+                    runServer = false;
+                }
+                else
+                {
+                    output.Code = HttpStatusCode.NotFound;
+                    output.Body = "wrong url";
                 }
 
-                var buffer = System.Text.Encoding.UTF8.GetBytes(output);
+                var buffer = System.Text.Encoding.UTF8.GetBytes(output.Body);
                 resp.ContentLength64 = buffer.Length;
+                resp.StatusCode = (int) output.Code;
                 await resp.OutputStream.WriteAsync(buffer, 0, buffer.Length);
 
                 resp.Close();

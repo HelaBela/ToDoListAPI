@@ -36,5 +36,13 @@ namespace ToDoAPI
         {
             return Task.FromResult(_usersDatabase[id]);
         }
+
+        public Task<bool> IsItemIdInDataBase(string id)
+        {
+            var itemsStored = _usersDatabase.Values.ToList();
+            var givenItem = itemsStored.Find(s => s.Id == id);
+
+            return Task.FromResult(givenItem != null);
+        }
     }
 }

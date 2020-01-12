@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,5 +11,6 @@ namespace ToDoAPI
         Task DeleteById(string id);
         Task<List<T>> RetrieveAll();
         Task<T> RetrieveById(string id);
+        Task<bool> IsItemIdInDataBase(string id);
     }
 }

@@ -20,6 +20,9 @@
         "projectReferences": {
           "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj": {
             "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj"
+          },
+          "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj": {
+            "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj"
           }
         }
       }

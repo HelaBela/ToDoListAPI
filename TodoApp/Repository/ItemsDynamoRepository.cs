@@ -36,7 +36,7 @@ namespace ToDoAPI
                 new Dictionary<string, AttributeValueUpdate>
                 {
                     {"TaskName", new AttributeValueUpdate(new AttributeValue(item.Title), AttributeAction.PUT)},
-                    
+
                     {
                         "UserId",
                         new AttributeValueUpdate(new AttributeValue(item.UserId),
@@ -57,20 +57,7 @@ namespace ToDoAPI
                 new Dictionary<string, AttributeValue> {{"TaskId", new AttributeValue(taskId)}});
         }
 
-//        public async Task<List<Item>> RetrieveAllByUserId(string userId)
-//        {
-//            var request = new GetItemRequest()
-//            {
-//                TableName = TableName,
-//                Key = userId
-//            };
-//
-//            var response = await _dbClient.GetItemAsync(request);
-//
-//            return ParseItems(response.Item);
-//        }
-
-        public async Task<List<Item>> RetrieveAll() // (string userId)
+        public async Task<List<Item>> RetrieveAll()
         {
             var request = new ScanRequest
             {
@@ -97,12 +84,25 @@ namespace ToDoAPI
 
         private Item ParseItem(Dictionary<string, AttributeValue> item)
         {
-            return new Item(item["UserId"].S,item["TaskId"].S,item["TaskName"].S, item["IsCompleted"].BOOL);
+            return new Item(item["UserId"].S, item["TaskId"].S, item["TaskName"].S, item["IsCompleted"].BOOL);
         }
 
         public Task<Item> RetrieveById(string taskId)
         {
             throw new System.NotImplementedException();
+        }
+
+        public async Task<bool> IsItemIdInDataBase(string id)
+        {
+            var itemsStored = await RetrieveAll();
+            var givenItem = itemsStored.Find(s => s.Id == id);
+
+            if (givenItem != null)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
