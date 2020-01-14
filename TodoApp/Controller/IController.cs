@@ -1,9 +1,8 @@
 using System;
-using System.Net;
 using System.Threading.Tasks;
 using TodoAppAPI;
 
-namespace ToDoAPI
+namespace ToDoAPI.Controller
 {
     public interface IController
     { 

@@ -11,6 +11,11 @@
       <e p="ToDoAPI.sln" t="IncludeFlat" />
       <e p="TodoApp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Controller" t="Include">
+          <e p="IController.cs" t="Include" />
+          <e p="ItemsController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
         <e p="ec2-user@ec2-54-206-43-210.ap-southeast-2.compute.amazonaws.com" t="Include">
           <e p="ConsoleApp3.deps.json" t="Include" />
           <e p="ConsoleApp3.dll" t="Include" />
@@ -25,6 +30,7 @@
             </e>
           </e>
         </e>
+        <e p="Program.cs" t="Include" />
         <e p="Repository" t="Include">
           <e p="IRepository.cs" t="Include" />
           <e p="ItemsDynamoRepository.cs" t="Include" />
@@ -32,13 +38,14 @@
           <e p="UserDynamoRepository.cs" t="Include" />
           <e p="UserInMemoryRepository.cs" t="Include" />
         </e>
+        <e p="ResponseModel.cs" t="Include" />
+        <e p="server.cs" t="Include" />
         <e p="TodoApp.csproj" t="IncludeRecursive" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="TodoApp.Integration.Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="ComponentTestcs.cs" t="Include" />
-        <e p="EndtoendTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -349,26 +356,6 @@
           </e>
         </e>
         <e p="TodoApp.Unit.Tests.csproj" t="IncludeRecursive" />
-      </e>
-      <e p="TodoAppAPI" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Controller" t="Include">
-          <e p="IController.cs" t="Include" />
-          <e p="ItemsController.cs" t="Include" />
-          <e p="UserController.cs" t="Include" />
-        </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="TodoAppAPI.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Program.cs" t="Include" />
-        <e p="ResponseModel.cs" t="Include" />
-        <e p="server.cs" t="Include" />
-        <e p="TodoAppAPI.csproj" t="IncludeRecursive" />
-        <e p="Validator.cs" t="Include" />
       </e>
     </e>
   </component>

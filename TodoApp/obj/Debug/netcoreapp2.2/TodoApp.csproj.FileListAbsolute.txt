@@ -7,3 +7,5 @@
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.AssemblyInfo.cs
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.dll
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.pdb
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.runtimeconfig.dev.json

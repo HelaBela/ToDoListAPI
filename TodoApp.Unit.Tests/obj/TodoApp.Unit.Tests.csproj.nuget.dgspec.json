@@ -30,9 +30,6 @@
             "projectReferences": {
               "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj": {
                 "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj"
-              },
-              "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj": {
-                "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj"
               }
             }
           }
@@ -125,60 +122,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj",
-        "projectName": "TodoAppAPI",
-        "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/TodoAppAPI.csproj",
-        "packagesPath": "/Users/helena.franczak/.nuget/packages/",
-        "outputPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoAppAPI/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "/Users/helena.franczak/.config/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj": {
-                "projectPath": "/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp/TodoApp.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
             }
           },
           "imports": [

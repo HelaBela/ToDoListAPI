@@ -1,8 +1,14 @@
 
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
-COPY ToDoList/bin/Release/netcoreapp2.2/published/ ToDoList
+RUN mkdir /app
+WORKDIR /app
+COPY ./ /app
+RUN dotnet build
+
 
 ENTRYPOINT ["dotnet", "ToDoList/ToDoList.dll"]
+
+CMD ["run"]
 
 

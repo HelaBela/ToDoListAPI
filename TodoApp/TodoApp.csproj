@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <RootNamespace>ToDoAPI</RootNamespace>
+        <OutputType>Exe</OutputType>
     </PropertyGroup>
 
     <ItemGroup>

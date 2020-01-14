@@ -15,5 +15,3 @@
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.csproj.CopyComplete
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.dll
 /Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.pdb
-/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.dll
-/Users/helena.franczak/RiderProjects/ToDoAPI/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb

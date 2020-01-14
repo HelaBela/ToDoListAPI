@@ -1,12 +1,10 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using TodoAppAPI;
+using ToDoAPI.Controller;
+
 
 namespace ToDoAPI.tests
 {

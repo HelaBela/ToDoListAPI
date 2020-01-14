@@ -16,17 +16,12 @@ namespace ToDoAPI
             Title = title;
             IsCompleted = isCompleted;
         }
+        
 
         public string ConvertToJson()
         {
             return  JsonConvert.SerializeObject(this);
         }
-
-//        public bool IsItemIdValid(string itemId )
-//        {
-//            if(itemId)
-//            
-//            return true;
-//        }
+        
     }
 }

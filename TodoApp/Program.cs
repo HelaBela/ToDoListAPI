@@ -1,5 +1,6 @@
 ﻿using System;
 using ToDoAPI;
+using ToDoAPI.Controller;
 
 namespace TodoAppAPI
 {
@@ -9,7 +10,7 @@ namespace TodoAppAPI
         {
             Console.WriteLine("Running!");
             var itemController = new ItemsController(new ItemsInMemoryRepository());
-            var userController = new UserController(new UserDynamoRepository());
+            var userController = new UserController(new UserInMemoryRepository());
 
             new Server(itemController, userController).Run();
             Console.WriteLine("Not running!");

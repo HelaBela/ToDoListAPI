@@ -12,7 +12,6 @@
           "Microsoft.NET.Test.Sdk": "15.9.0",
           "NUnit3TestAdapter": "3.11.0",
           "TodoApp": "1.0.0",
-          "TodoAppAPI": "1.0.0",
           "NUnit": "3.11.0"
         },
         "runtime": {
@@ -996,14 +995,6 @@
         "runtime": {
           "TodoApp.dll": {}
         }
-      },
-      "TodoAppAPI/1.0.0": {
-        "dependencies": {
-          "TodoApp": "1.0.0"
-        },
-        "runtime": {
-          "TodoAppAPI.dll": {}
-        }
       }
     }
   },
@@ -1504,11 +1495,6 @@
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "TodoApp/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TodoAppAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

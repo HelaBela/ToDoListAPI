@@ -3,6 +3,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using ToDoAPI.Controller;
 using TodoAppAPI;
 
 namespace ToDoAPI
@@ -62,13 +64,13 @@ namespace ToDoAPI
                 else if (req.Url.Segments[1] == "done/")
                 {
                     output.Code = HttpStatusCode.Gone;
-                    output.Body = "bye";
+                    output.Body = "{\"Response\": \"Bye.\"}";
                     runServer = false;
                 }
                 else
                 {
                     output.Code = HttpStatusCode.NotFound;
-                    output.Body = "wrong url";
+                    output.Body = "{\"Response\": \"Wrong url.\"}";
                 }
 
                 var buffer = System.Text.Encoding.UTF8.GetBytes(output.Body);

@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a9b3f6b-7799-451a-9d2a-e3e1d2dd0502" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TodoAppAPI/ResponseModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoAppAPI/Validator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToDoAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestcs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestcs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestcs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/EndtoendTests.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/TodoApp.Integration.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/TodoApp.Integration.Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.Integration.Tests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.Integration.Tests.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.Integration.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.Integration.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.Integration.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.Integration.Tests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/Debug/netcoreapp2.2/TodoApp.Integration.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
@@ -24,47 +27,63 @@
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Integration.Tests/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/TodoApp.Unit.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/TodoApp.Unit.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/Debug/netcoreapp2.2/TodoApp.Unit.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/TodoApp.Unit.Tests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/TodoApp.Unit.Tests.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/TodoApp.Unit.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/TodoApp.Unit.Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Unit.Tests/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Repository/IRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Repository/ItemsDynamoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Repository/ItemsDynamoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Repository/ItemsInMemoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Repository/ItemsInMemoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Repository/UserDynamoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Repository/UserDynamoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Repository/UserInMemoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Repository/UserInMemoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/TodoApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/TodoApp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/Debug/netcoreapp2.2/TodoApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/obj/TodoApp.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/TodoApp.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/obj/TodoApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/TodoApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Controller/IController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/Controller/IController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Controller/ItemsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/Controller/ItemsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Controller/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/Controller/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAppAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Controller/IController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Controller/IController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Controller/ItemsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Controller/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Controller/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/ResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/ResponseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/TodoAppAPI.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/Validator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoApp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoApp.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/Debug/netcoreapp2.2/TodoAppAPI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/TodoAppAPI.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoAppAPI/obj/project.packagespec.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +95,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Library/Preferences/Rider2019.1/resharper-host/DecompilerCache/decompiler/33E46F62-2720-44F4-B84B-BEBF6D7F0B71/13/5437131f/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33E46F62-2720-44F4-B84B-BEBF6D7F0B71/a1/d36c7ef9/Guid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,34 +107,30 @@
     <setting file="file://$USER_HOME$/app/Server.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TodoApp/Repository/ItemsInMemoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EF68433-F777-44D1-9C80-204F0A6A4BA5/0d/1477f26b/Uri.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoApp.Integration.Tests/EndtoendTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99767828-0215-48D2-B028-B2267C1114C6/2c/480db631/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/Server.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/ResponseModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TodoApp/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TodoApp/ResponseModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A5048596-23D9-4140-841C-36E690003C98/84/17f5b63f/HttpListenerContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestcs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/20735148-1523-4917-A5E8-F91B0B239405/96/3f992da3/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/95E184CB-E624-4AF4-AF62-4E62AE43DC9D/63/252454f5/HttpListenerContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FAAD9D21-3615-4656-8B80-6EA7D6935574/38/94a431ff/HttpStatusCode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/Controller/IController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/Controller/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/Controller/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TodoApp/Controller/IController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Preferences/Rider2019.1/resharper-host/DecompilerCache/decompiler/33E46F62-2720-44F4-B84B-BEBF6D7F0B71/d4/49d23134/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TodoApp/Controller/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TodoApp/Repository/UserInMemoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/Validator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TodoApp/Repository/UserDynamoRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/MessagePumpStrategy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/95E184CB-E624-4AF4-AF62-4E62AE43DC9D/79/afc317ca/HttpListenerRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33E46F62-2720-44F4-B84B-BEBF6D7F0B71/4c/6330fc18/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TodoAppAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TodoApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ToDoList/ToDoTasksInDynamo.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/ToDoTask.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/Person.cs" />
-        <option value="$PROJECT_DIR$/ToDoApi.IntegrationTests/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/IRepository.cs" />
-        <option value="$PROJECT_DIR$/ToDoList/UserRepository.cs" />
         <option value="$PROJECT_DIR$/ToDoList/UserController.cs" />
         <option value="$PROJECT_DIR$/ToDoList/Program.cs" />
         <option value="$PROJECT_DIR$/ToDoList/ItemsController.cs" />
@@ -135,31 +151,37 @@
         <option value="$PROJECT_DIR$/TodoApp/ItemsInMemoryRepository.cs" />
         <option value="$PROJECT_DIR$/TodoApp/IController.cs" />
         <option value="$PROJECT_DIR$/TodoApp/ItemsController.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Server.cs" />
         <option value="$PROJECT_DIR$/TodoApp/UserController.cs" />
         <option value="$PROJECT_DIR$/TodoApp/IRepository.cs" />
         <option value="$PROJECT_DIR$/TodoApp/UserDynamoRepository.cs" />
         <option value="$PROJECT_DIR$/TodoApp/UserInMemoryRepository.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Program.cs" />
         <option value="$PROJECT_DIR$/TodoApp/User.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/Controller/IController.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/Controller/UserController.cs" />
         <option value="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestExample.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/Program.cs" />
-        <option value="$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/RouteNotFoundException.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/ItemCreationValidator.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Item.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/Validator.cs" />
         <option value="$PROJECT_DIR$/TodoApp/Repository/IRepository.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Repository/ItemsInMemoryRepository.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Repository/ItemsDynamoRepository.cs" />
         <option value="$PROJECT_DIR$/TodoApp/Repository/UserDynamoRepository.cs" />
-        <option value="$PROJECT_DIR$/TodoApp/Repository/UserInMemoryRepository.cs" />
-        <option value="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestcs.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/ResponseModel.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/Server.cs" />
         <option value="$PROJECT_DIR$/TodoAppAPI/Controller/ItemsController.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Repository/ItemsDynamoRepository.cs" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/ResponseModel.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Server.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Controller/UserController.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Controller/IController.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Repository/ItemsInMemoryRepository.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Repository/UserInMemoryRepository.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Program.cs" />
+        <option value="$PROJECT_DIR$/TodoApp/Item.cs" />
+        <option value="$PROJECT_DIR$/TodoApp.Integration.Tests/EndtoendTests.cs" />
+        <option value="$PROJECT_DIR$/TodoApp.Integration.Tests/ComponentTestcs.cs" />
       </list>
     </option>
   </component>
@@ -171,7 +193,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -187,14 +209,14 @@
   </component>
   <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2/TodoAppAPI.dll" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/TodoApp/bin/Debug/netcoreapp2.2/TodoApp.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TodoAppAPI/bin/Debug/netcoreapp2.2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TodoApp/bin/Debug/netcoreapp2.2" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TodoAppAPI/TodoAppAPI.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TodoApp/TodoApp.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -219,7 +241,7 @@
       <workItem from="1576630407759" duration="14423000" />
       <workItem from="1578266316073" duration="323000" />
       <workItem from="1578269220829" duration="443000" />
-      <workItem from="1578269702434" duration="102663000" />
+      <workItem from="1578269702434" duration="123018000" />
     </task>
     <servers />
   </component>
@@ -263,30 +285,82 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs</url>
-          <line>108</line>
-          <properties documentPath="$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" initialLine="108">
+          <url>file://$PROJECT_DIR$/TodoApp/Server.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/TodoApp/Server.cs" initialLine="59">
             <startOffsets>
-              <option value="3447" />
+              <option value="1793" />
             </startOffsets>
             <endOffsets>
-              <option value="3554" />
+              <option value="1828" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="88" />
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs</url>
-          <line>145</line>
-          <properties documentPath="$PROJECT_DIR$/TodoApp.Unit.Tests/ItemsControllerTests.cs" initialLine="145">
+          <url>file://$PROJECT_DIR$/TodoApp/Server.cs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/TodoApp/Server.cs" initialLine="61">
             <startOffsets>
-              <option value="4712" />
+              <option value="1867" />
             </startOffsets>
             <endOffsets>
-              <option value="4766" />
+              <option value="1962" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="89" />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs</url>
+          <line>30</line>
+          <properties documentPath="$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" initialLine="30">
+            <startOffsets>
+              <option value="983" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1031" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" initialLine="36">
+            <startOffsets>
+              <option value="1221" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1424" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs</url>
+          <line>43</line>
+          <properties documentPath="$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" initialLine="41">
+            <startOffsets>
+              <option value="1437" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1438" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs</url>
+          <line>44</line>
+          <properties documentPath="$PROJECT_DIR$/TodoApp/Controller/ItemsController.cs" initialLine="44">
+            <startOffsets>
+              <option value="1499" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1714" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
